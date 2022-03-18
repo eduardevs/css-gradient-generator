@@ -6,11 +6,11 @@ import React, { useState } from 'react'
 
 function App() {
 
-  const [primary, setPrimary] = useState('yellow')
-  const [secondary, setSecondary] = useState('blue')
-  const [ternary, setTernary] = useState('red')
+  const [primary, setPrimary] = useState('#ebdc34')
+  const [secondary, setSecondary] = useState('#1827c9')
+  const [ternary, setTernary] = useState('#f51616')
 
-  const [degree, setDegree] = useState(0)
+  const [degree, setDegree] = useState(-180)
 
   const [breakpoint1, setBreakpoint1] = useState(1)
   const [breakpoint2, setBreakpoint2] = useState(50)

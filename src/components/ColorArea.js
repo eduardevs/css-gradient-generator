@@ -9,7 +9,7 @@ export default function ColorArea({ primary, secondary, ternary, breakpoint1, br
 
             <div style={{ background: gradient, width: 500, height: 300, marginTop: 50 }} />
 
-            <p>background: {gradient}</p>
+            <p>background: {gradient};</p>
 
         </div>
     )

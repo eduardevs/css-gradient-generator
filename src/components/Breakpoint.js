@@ -42,7 +42,7 @@ export default function Breakpoint({ primary, setPrimary, secondary, setSecondar
                 :
                 <>
                     <input type="range" id="volume" name="volume"
-                        min="-160" max="160" onChange={(e) => setDegree(e.target.value)} />
+                        min="-360" max="360" onChange={(e) => setDegree(e.target.value)} />
                     <label for="volume">degrees</label>
                 </>
             }
