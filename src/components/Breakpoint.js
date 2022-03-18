@@ -1,36 +1,30 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 export default function Breakpoint({ primary, setPrimary, secondary, setSecondary, ternary, setTernary, breakpoint1, setBreakpoint1, breakpoint2, setBreakpoint2, breakpoint3, setBreakpoint3, colorBox, setDegree, degree, ...props }) {
-
 
     const handleChange = (e) => {
         const { value } = e.target
 
         if (primary) {
             setPrimary(value)
-            // console.log(primary)
         } else if (secondary) {
             setSecondary(value)
-            // console.log(secondary)
         } else if (ternary) {
             setTernary(value)
         }
     }
-
 
     const handleBreakpoint = (e) => {
         const { value } = e.target
 
         if (breakpoint1) {
             setBreakpoint1(value)
-            console.log('break1')
         } else if (breakpoint2) {
             setBreakpoint2(value)
         } else if (breakpoint3) {
             setBreakpoint3(value)
         }
     }
-
 
     return (
         <div style={{
@@ -48,7 +42,7 @@ export default function Breakpoint({ primary, setPrimary, secondary, setSecondar
                 :
                 <>
                     <input type="range" id="volume" name="volume"
-                        min="0" max="360" onChange={(e) => setDegree(e.target.value)} />
+                        min="-160" max="160" onChange={(e) => setDegree(e.target.value)} />
                     <label for="volume">degrees</label>
                 </>
             }
@@ -56,5 +50,3 @@ export default function Breakpoint({ primary, setPrimary, secondary, setSecondar
     )
 }
 
-
-// TODO: MAKE AN INPUT THAT CAN CHANGE 
