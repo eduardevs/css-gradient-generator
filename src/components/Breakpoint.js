@@ -28,23 +28,24 @@ export default function Breakpoint({ primary, setPrimary, secondary, setSecondar
 
     return (
         <div style={{
-            width: "50%"
-        }}>
+            width: "100%", border: "1px solid green", height: "150px"
+        }} >
 
             {props.children !== 'setDegree' ?
-                <>
-                    < input type='color' name={primary ? primary : (secondary ? secondary : ternary)} value={primary ? primary : (secondary ? secondary : ternary)} onChange={handleChange} />
-                    <label htmlFor=''>color</label>
-
-                    <input type='number' min='0' max='100' id='breakpoint' value={breakpoint1 ? breakpoint1 : (breakpoint2 ? breakpoint2 : breakpoint3)} onChange={handleBreakpoint} />
+                <div style={{ padding: "30px" }}>
+                    <input style={{ width: "100%" }} type='number' min='0' max='100' id='breakpoint' value={breakpoint1 ? breakpoint1 : (breakpoint2 ? breakpoint2 : breakpoint3)} onChange={handleBreakpoint} />
                     <label htmlFor='breakpoint'>breakpoint</label>
-                </>
+                    < input style={{ width: "100%" }} type='color' name={primary ? primary : (secondary ? secondary : ternary)} value={primary ? primary : (secondary ? secondary : ternary)} onChange={handleChange} />
+                    <label htmlFor=''>{props.children}</label>
+
+
+                </div>
                 :
-                <>
-                    <input type="range" id="volume" name="volume"
+                <div style={{ padding: "30px" }}>
+                    <input type="range" id="volume" name="volume" style={{ width: "100%" }}
                         min="-360" max="360" onChange={(e) => setDegree(e.target.value)} />
                     <label for="volume">degrees</label>
-                </>
+                </div>
             }
         </div>
     )

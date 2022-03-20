@@ -20,29 +20,35 @@ function App() {
 
 
   return (
-    <>
+    <div>
       <h1>CSS Gradient Creator</h1>
-      <div className="App">
 
-        <Breakpoint style={{ width: "50%" }} primary={primary} setPrimary={setPrimary} setBreakpoint1={setBreakpoint1} breakpoint1={breakpoint1} colorBox={colorBox}>
-          Couleur 1
-        </Breakpoint>
+      <div style={{ display: 'flex', width: '90%', justifyContent: "center" }}>
+        <div style={{ width: "50%" }}>
+          <Breakpoint style={{}} primary={primary} setPrimary={setPrimary} setBreakpoint1={setBreakpoint1} breakpoint1={breakpoint1} colorBox={colorBox}>
+            Couleur 1
+          </Breakpoint>
 
-        <Breakpoint style={{ width: "50%" }} secondary={secondary} setSecondary={setSecondary} setBreakpoint2={setBreakpoint2} breakpoint2={breakpoint2} colorBox={colorBox}>
-          Couleur 2
-        </Breakpoint>
+          <Breakpoint style={{ width: "50%" }} secondary={secondary} setSecondary={setSecondary} setBreakpoint2={setBreakpoint2} breakpoint2={breakpoint2} colorBox={colorBox}>
+            Couleur 2
+          </Breakpoint>
+        </div>
+        <div style={{ width: "50%" }}>
+          <Breakpoint style={{ width: "50%" }} ternary={ternary} setTernary={setTernary} setBreakpoint3={setBreakpoint3} breakpoint3={breakpoint3} colorBox={colorBox}>
+            Couleur 3
+          </Breakpoint>
 
-        <Breakpoint style={{ width: "50%" }} ternary={ternary} setTernary={setTernary} setBreakpoint3={setBreakpoint3} breakpoint3={breakpoint3} colorBox={colorBox}>
-          Couleur 3
-        </Breakpoint>
-
-        <Breakpoint style={{ width: "50%" }} setDegree={setDegree} degree={degree}>
-          setDegree
-        </Breakpoint>
-
-        <ColorArea style={{ display: 'flex', justifyContent: 'center' }} primary={primary} secondary={secondary} ternary={ternary} breakpoint1={breakpoint1} breakpoint2={breakpoint2} breakpoint3={breakpoint3} degree={degree} />
+          <Breakpoint style={{ width: "50%" }} setDegree={setDegree} degree={degree}>
+            setDegree
+          </Breakpoint>
+        </div>
       </div>
-    </>
+      <div style={{ display: 'block', width: "90%" }} >
+        <ColorArea primary={primary} secondary={secondary} ternary={ternary} breakpoint1={breakpoint1} breakpoint2={breakpoint2} breakpoint3={breakpoint3} degree={degree} />
+      </div>
+
+    </div>
+
   );
 }
 
