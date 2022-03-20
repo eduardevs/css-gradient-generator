@@ -1,5 +1,5 @@
 import './App.css';
-import Breakpoint from './components/Breakpoint';
+import Palette from './components/Palette';
 import ColorArea from './components/ColorArea'
 import React, { useState } from 'react'
 
@@ -21,33 +21,33 @@ function App() {
 
   return (
     <div>
-      <h1>CSS Gradient Creator</h1>
+      <h1 style={{ textAlign: 'center' }}>CSS Gradient Creator</h1>
 
-      <div style={{ display: 'flex', width: '90%', justifyContent: "center" }}>
-        <div style={{ width: "50%" }}>
-          <Breakpoint style={{}} primary={primary} setPrimary={setPrimary} setBreakpoint1={setBreakpoint1} breakpoint1={breakpoint1} colorBox={colorBox}>
+      <div style={{ width: '90%', margin: "0 auto" }}>
+        <div style={{ display: 'flex', width: "100%" }}>
+          <Palette breakpointTitre={'Breakpoint 1'} primary={primary} setPrimary={setPrimary} setBreakpoint1={setBreakpoint1} breakpoint1={breakpoint1} colorBox={colorBox}>
             Couleur 1
-          </Breakpoint>
+          </Palette>
 
-          <Breakpoint style={{ width: "50%" }} secondary={secondary} setSecondary={setSecondary} setBreakpoint2={setBreakpoint2} breakpoint2={breakpoint2} colorBox={colorBox}>
+          <Palette breakpointTitre={'Breakpoint 2'} style={{ width: "50%" }} secondary={secondary} setSecondary={setSecondary} setBreakpoint2={setBreakpoint2} breakpoint2={breakpoint2} colorBox={colorBox}>
             Couleur 2
-          </Breakpoint>
+          </Palette>
         </div>
-        <div style={{ width: "50%" }}>
-          <Breakpoint style={{ width: "50%" }} ternary={ternary} setTernary={setTernary} setBreakpoint3={setBreakpoint3} breakpoint3={breakpoint3} colorBox={colorBox}>
+        <div style={{ display: 'flex', width: "100%" }}>
+          <Palette breakpointTitre={'Breakpoint 3'} style={{ width: "50%" }} ternary={ternary} setTernary={setTernary} setBreakpoint3={setBreakpoint3} breakpoint3={breakpoint3} colorBox={colorBox}>
             Couleur 3
-          </Breakpoint>
+          </Palette>
 
-          <Breakpoint style={{ width: "50%" }} setDegree={setDegree} degree={degree}>
+          <Palette breakpointTitre={'Breakpoint 4'} style={{ width: "50%" }} setDegree={setDegree} degree={degree}>
             setDegree
-          </Breakpoint>
+          </Palette>
         </div>
       </div>
-      <div style={{ display: 'block', width: "90%" }} >
+      <div style={{ display: 'block', width: "90%", margin: "0 auto" }} >
         <ColorArea primary={primary} secondary={secondary} ternary={ternary} breakpoint1={breakpoint1} breakpoint2={breakpoint2} breakpoint3={breakpoint3} degree={degree} />
       </div>
 
-    </div>
+    </div >
 
   );
 }

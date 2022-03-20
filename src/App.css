@@ -1,3 +1,19 @@
 .App {
     /* display: flex; */
 }
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 15rem;
+    border: 1px solid rgb(10, 89, 192);
+    height: 1.5rem;
+  }
+
+
+input:focus {
+    color: rgb(36, 103, 190)
+}
+ 
